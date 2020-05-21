@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+    font-size: 16px;
+}
+
+.main {
+    width: 100%;
+    height: 100%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+}
+
+.card {
+    height: 390px;
+    width: 350px;
+    padding: 35px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__top-dastination-separator {
+    width: 25px;
+    height: 1px;
+    background-color: hsl(200, 50%, 70%);
+}
+
+.card__top-destination--from,
+.card__top-destination--to {
+    font-family: Prompt;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: hsl(200, 60%, 50%);
+    position: relative;
+}
+
+.card__top-destination--from::before,
+.card__top-destination--to::after {
+    font-family: Roboto;
+    font-weight: 500;
+    position: absolute;
+    bottom: -5px;
+    font-size: .8rem;
+    color: hsl(0, 0%, 80%);
+}
+
+.card__top-destination--from::before {
+    content: "Frankfurt";
+}
+
+.card__top-destination--to::after {
+    content: "Amsterdam";
+    right: 0;
+}
+
+.card__bottom {
+    height: 75%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.card__bottom--flight {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.card__bottom--flight-info {
+    display: flex;
+    flex-direction: column;
+    margin-right: 60px;
+}
+
+.info--top {
+    font-weight: 500;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    font-size: .8rem;
+    color: hsl(0, 0%, 70%);
+}
+
+.info--bottom {
+    font-size: .9rem;
+}
+
+.card__bottom--passanger-info {
+    width: 60%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.passanger-info--wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.card__bottom--qr-code {
+    height: 140px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
