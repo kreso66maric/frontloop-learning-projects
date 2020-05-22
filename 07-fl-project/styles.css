@@ -1,0 +1,132 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Roboto, sans-serif;
+    background-color: hsl(34, 46%, 74%);
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 1.3fr 2fr;
+    height: 550px;
+    width: 900px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    box-shadow: 1px 1px 25px hsla(0, 0%, 0%, .6);
+}
+
+.author__container {
+    height: 100%;
+    background-color: hsl(213, 13%, 30%);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.author__container-title {
+    color: hsl(0, 0%, 97%);
+    margin-top: 10px;
+    position: relative;
+}
+
+.author__container-title::after {
+    position: absolute;
+    content: "";
+    bottom: -15px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background-color: hsl(29, 81%, 50%);
+}
+
+.title--main {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.title--sub {
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+.author__container-info {
+    display: flex;
+    align-items: center;
+}
+
+.info--image {
+    height: 80px;
+    border-radius: 50%;
+}
+
+.info--name {
+    color: hsl(0, 0%, 87%);
+    padding-left: 20px;
+    font-size: .9rem;
+}
+
+.content__container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.content__container-text {
+    height: 85%;
+    padding: 30px;
+}
+
+.text--par {
+    font-size: 1.2rem;
+    font-weight: 200;
+    line-height: 1.4;
+    margin-top: 35px;
+    position: relative;
+}
+
+.text--par:nth-child(1)::first-letter {
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.content__container-bottom {
+    height: 15%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    box-shadow: 0 -2px 15px hsla(0, 0%, 80%, .9);
+}
+
+.date {
+    color: hsl(0, 0%, 30%);
+    font-size: .9rem;
+    font-weight: 200;
+}
+
+time {
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.content__container-bottom--right {
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.comment--count {
+    font-size: .8rem;
+    color: hsl(0, 0%, 60%);
+    margin-right: 5px;
+}
