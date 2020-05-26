@@ -1,0 +1,166 @@
+:root {
+    --white: hsl(0, 0%, 99%);
+    --pink: hsl(5, 100%, 80%);
+    --pink-light: hsl(10, 100%, 95%);
+    --pink-alpha: hsla(10, 100%, 95%, .5);
+    --dark-one: hsl(0, 0%, 20%);
+    --dark-two: hsl(0, 0%, 15%);
+    --dark-three: hsl(0, 0%, 10%);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    /* outline: solid .10rem hsla(0, 0%, 0%, .6); */
+}
+
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: var(--pink);
+}
+
+.main {
+    max-width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+/*=============
+    Typography
+=============*/
+.program-name {
+    display: inline;
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: var(--pink-light);
+    margin-right: 3em;
+    cursor: pointer;
+}
+
+.program-name:not(:nth-child(1)) {
+    opacity: .6;
+}
+
+.program-name:not(:nth-child(1)):hover {
+    opacity: .9;
+}
+
+.text {
+    width: 75%;
+    font-size: 1.2rem;
+    color: var(--white);
+    margin: 2em 0 2em 0;
+}
+
+.box-left {
+    transform: rotate(180deg);
+}
+
+.box-title {
+    font-size: 1.1rem;
+    font-weight: 200;
+    color: var(--pink);
+    margin-bottom: 1em;
+}
+
+.box-time {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--pink-light);
+}
+
+.btn {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 40%);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--pink-light);
+    border: none;
+    border-radius: 5px;
+    padding: 5% 30%;
+    background-color: #000;
+    cursor: pointer;
+}
+
+.btn:hover {
+    bottom: 2px;
+}
+
+/*=============
+    Layout
+=============*/
+
+.programs {
+    /* width: 100vw; */
+    margin-top: 4em;
+    padding: 2em 0 0 0;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    position: relative;
+}
+
+.box-left,
+.box-right {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--pink-alpha);
+    cursor: pointer;
+}
+
+.box-left:hover,
+.box-right:hover {
+    background-color: var(--pink-light);
+}
+
+.box-left {
+    left: -100px;
+}
+
+.box-right {
+    right: -100px;
+}
+
+.program-box {
+    width: 33.3333%;
+    height: 300px;
+    padding: 8em 0 8em 3em;
+    position: relative;
+}
+
+.program-box:nth-of-type(2) {
+    background-color: var(--dark-one);
+}
+
+.program-box:nth-of-type(3) {
+    background-color: var(--dark-two);
+}
+
+.program-box:nth-of-type(4) {
+    background-color: var(--dark-three);
+}
+
+@media screen and (max-width: 1200px) {
+    .box-left {
+        bottom: -200px;
+        left: 30px;
+    }
+    
+    .box-right {
+        right: 30px;
+        bottom: -200px;
+    }
+}
