@@ -1,5 +1,8 @@
 :root {
-    --blue: hsl(230, 20%, 55%);
+    --blue: hsl(230, 20%, 45%);
+    --blue-light: hsl(230, 20%, 97%);
+    --blue-dark: hsl(230, 20%, 25%);
+    --blue-dark-alpha: hsla(230, 20%, 25%, .7);
 }
 
 *,
@@ -8,10 +11,123 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* outline: .10rem solid hsla(0, 0%, 0%, .5); */
 }
 
 body {
     font-family: "Roboto", sans-serif;
     height: 100vh;
     background-color: var(--blue);
+    position: relative;
+}
+
+.main {
+    height: 900px;
+    width: 600px;
+    min-width: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.icons__list {
+    list-style: none;
+    display: flex;
+    gap: 5px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.list__item {
+    width: 100px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-dark-alpha);
+    cursor: pointer;
+    transition: transform 300ms;
+}
+
+.list__item:hover {
+    transform: scale(1.2);
+    background-color: var(--blue-dark);
+}
+
+.list__item:nth-of-type(3) {
+    transform: scale(1.2);
+    background-color: var(--blue-dark);
+}
+
+.card {
+    height: 550px;
+    width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card__top {
+    height: 35%;
+    background-image: url('img/food.jpg');
+    background-size: cover;
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.card__top::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .4);
+}
+
+.card__top-title {
+    font-size: 2rem;
+    color: var(--blue-light);
+    z-index: 100;
+}
+
+.card__top-location {
+    display: flex;
+    align-items: center;
+    color: var(--blue-light);
+    font-weight: 500;
+    margin-top: 15px;
+    z-index: 100;
+}
+
+.card__top-location img {
+    margin-right: 10px;
+}
+
+.card__bottom {
+    height: 65%;
+    background-color: var(--blue-light);
+}
+
+.card__bottom-content {
+    height: 90px;
+    padding: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--blue-dark-alpha);
+}
+
+.content-title,
+.content-price {
+    font-weight: 700;
+    color: var(--blue-dark-alpha);
+}
+
+.content-price {
+    font-size: 1.4rem;
 }
