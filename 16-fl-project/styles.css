@@ -1,0 +1,135 @@
+:root {
+    --red: hsl(10, 50%, 50%);
+    --purple: hsl(250, 59%, 60%);
+}
+
+.light {
+    color: hsl(0, 0%, 80%);
+}
+
+.today-red {
+    border-radius: 50%;
+    background-color: var(--red);
+    color: white;
+}
+
+.today-purple {
+    border-radius: 50%;
+    background-color: var(--purple);
+    color: white;
+}
+
+.red-circle {
+    border: 3px solid var(--red);
+    border-radius: 50%;
+}
+
+.purple-circle {
+    border: 3px solid var(--purple);
+    border-radius: 50%;
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background-color: hsl(200, 50%, 65%);
+}
+
+.main {
+    height: 700px;
+    width: 600px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 10px hsla(0, 0%, 0%, .4);
+}
+
+.main__top {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+    border-bottom: 1px solid hsl(0, 0%, 80%);
+}
+
+.main__top-day,
+.main__top-year {
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 60%);
+}
+
+.main__calendar {
+    height: 60%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    padding: 0 3em;
+}
+
+.calendar__day,
+.calendar__date {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar__day {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 50%);
+}
+
+.calendar__date {
+    font-size: 1.2rem;
+    font-weight: 500;
+    position: relative;
+}
+
+.calendar__bottom {
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid hsl(0, 0%, 80%);
+    padding: 2em;
+}
+
+.time,
+.temperature,
+.plus {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.plus {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+}
+
+.before-num {
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    height: 40%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
