@@ -1,0 +1,163 @@
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    background-color: hsl(180, 50%, 80%);
+}
+
+.main {
+    width: 80%;
+    max-width: 1100px;
+    min-width: 800px;
+    height: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: hsl(0, 0%, 100%);
+    display: flex;
+}
+
+.main__left {
+    height: 100%;
+    width: 45%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: hsla(0, 0%, 0%, .4);
+    position: relative;
+}
+
+.overlay__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+}
+
+.content__title {
+    color: white;
+    margin-bottom: .2em;
+}
+
+.content__subtitle {
+    color: white;
+    margin-bottom: 1em;
+}
+
+.content__button {
+    font-size: .9rem;
+    border: none;
+    color: white;
+    padding: .9em 2.5em;
+    background-color: hsla(150, 50%, 60%, .7);
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.content__button:hover {
+    background-color: hsl(150, 50%, 60%);
+}
+
+.content__button img {
+    margin-right: .6em;
+}
+
+.main__right {
+    height: 100%;
+    width: 55%;
+    padding: 2em;
+}
+
+.container__menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-title {
+    font-weight: 500;
+}
+
+.container__years {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2em;
+    
+}
+
+.year {
+    font-size: 1.3rem;
+    color: hsl(0, 0%, 80%);
+    cursor: pointer;
+}
+
+.year:hover {
+    color: hsl(0, 0%, 0%);
+}
+
+.current-year {
+    color: hsl(0, 0%, 0%);
+}
+
+.container__atricles {
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.article {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-title {
+    display: flex;
+    align-items: center;
+}
+
+.article-img {
+    height: 40px;
+    margin-right: 1em;
+    border-radius: 50%;
+}
+
+.title {
+    font-size: .8rem;
+}
+
+.article-date {
+    display: flex;
+    align-items: center;
+}
+
+.date-day {
+    font-size: 2rem;
+    font-weight: 200;
+    margin-right: .3em;
+}
+
+.date-month {
+    display: block;
+    font-weight: 500;
+}
+
+.date-year {
+    font-size: .9rem;
+}
