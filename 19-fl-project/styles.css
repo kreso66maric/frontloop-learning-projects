@@ -1,0 +1,217 @@
+:root {
+    --background: hsl(220, 80%, 60%);
+}
+
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+    background-color: var(--background);
+}
+
+.main {
+    height: 700px;
+    width: 450px;
+    background-color: hsl(0, 0%, 100%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main__search {
+    height: 13%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2em;
+}
+
+.google {
+    text-transform: uppercase;
+    font-size: .9rem;
+}
+
+.menu,
+.search {
+    height: 1.3em;
+}
+
+.main__map {
+    position: absolute;
+    top: 13%;
+    right: -2%;
+    height: 22%;
+    width: 104%;
+    padding: 1.7em 2.2em;
+    border-radius: 5px;
+    background-image: url('img/map.png');
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0px 18px 14px -4px hsla(0, 0%, 0%, .3);
+}
+
+.main__map::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: hsla(220, 80%, 60%, .66);
+}
+
+.main__map-btn {
+    position: absolute;
+    right: 25px;
+    bottom: -18px;
+    border-radius: 4px;
+    border: none;
+    font-size: .9rem;
+    font-weight: 500;
+    padding: .6em 1em;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    background-color: var(--background);
+    color: white;
+}
+
+.btn-icon {
+    height: 1.3em;
+    margin-right: .4em;
+}
+
+.main__map-distance {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.distance-start,
+.distance-finish {
+    color: white;
+    font-size: 1rem;
+}
+
+.distance-timeline {
+    width: 60%;
+    height: 2px;
+    background-color: hsla(0, 0%, 100%, .5);
+    position: relative;
+}
+
+.distance-timeline::before,
+.distance-timeline::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.distance-timeline::before {
+    top: -3px;
+    left: 0;
+}
+
+.distance-timeline::after {
+    top: -3px;
+    right: 0;
+}
+
+.distance-position {
+    height: 1.4em;
+    position: absolute;
+    top: -25px;
+    left: 20%;
+}
+
+.distance-position-container::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 8px;
+    width: 22%;
+    height: 2px;
+    background-color: white;
+}
+
+.main__map-duration {
+    position: relative;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5em;
+}
+
+.duration-time,
+.duration-distance {
+    color: white;
+    font-weight: 500;
+    font-size: .9rem;
+}
+
+.main__info {
+    height: 65%;
+    padding: 2em;
+}
+
+.main__info-location {
+    margin-top: .5em;
+    display: block;
+}
+
+.main__info-direction {
+    margin-top: 1em;
+    display: flex;
+    align-items: center;
+    height: 50px;
+}
+
+.arrow {
+    height: 1.8em;
+    margin-right: 2em;
+}
+
+.direction-length {
+    font-size: .9rem;
+    color: hsl(0, 0%, 70%);
+    margin-bottom: .8em;
+}
+
+.main__info-streetwiev {
+    height: 90px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    width: 90%;
+    background-image: url('img/streetview.jpg');
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.location-icon {
+    height: 2em;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translate(10px, -50%);
+}
