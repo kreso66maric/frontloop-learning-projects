@@ -1,13 +1,87 @@
+:root {
+    --text-color: hsl(0, 0%, 40%);
+}
+
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: .10rem solid hsla(0, 0%, 0%, .5);
+    /* outline: .10rem solid hsla(0, 0%, 0%, .5); */
 }
 
 body {
     height: 100vh;
     font-family: "Roboto", sans-serif;
+}
+/*==================
+Main Container
+===================*/
+.main {
+
+}
+/*==================
+Header
+===================*/
+.header {
+    display: flex;
+    
+}
+/* Logo */
+
+.header__logo,
+.header__search-box,
+.header__nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border: 1px solid hsl(0, 0%, 90%);
+}
+
+.header__logo {
+    position: relative;
+    width: 20%;
+}
+
+.logo {
+    width: 35px;
+    position: absolute;
+    right: 20px;
+}
+/* Search Box */
+
+.header__search-box {
+    width: 15%;
+}
+
+.search-box {
+    font-size: .8em;
+    padding: 8px;
+    margin: 10px;
+    border-radius: 100px;
+    border: 1px solid hsl(0, 0%, 70%);
+}
+
+.fa-search {
+    position: relative;
+    left: -40px;
+    color: var(--text-color);
+}
+/* Navigation */
+.nav__list {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav__list-item {
+    font-size: 1.25em;
+    font-weight: 100;
+    color: var(--text-color);
+}
+
+.nav__list-item:nth-of-type(5) {
+    color: hsl(32, 120%, 50%);
 }
