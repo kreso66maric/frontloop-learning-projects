@@ -1,5 +1,7 @@
 :root {
-    --text-color: hsl(0, 0%, 40%);
+    --text-main: hsl(0, 0%, 50%);
+    --text-bold: hsl(0, 0%, 20%);
+    --text-light: hsl(0, 0%, 70%);
 }
 
 *,
@@ -25,24 +27,26 @@ Main Container
 Header
 ===================*/
 .header {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 3fr 1fr 2fr;
     
 }
 /* Logo */
 
 .header__logo,
 .header__search-box,
-.header__nav {
+.header__nav,
+.header__icons,
+.header__user-avatar {
     display: flex;
     align-items: center;
-    justify-content: center;
     height: 80px;
-    border: 1px solid hsl(0, 0%, 90%);
+    border: 1px solid hsl(0, 0%, 95%);
 }
 
 .header__logo {
     position: relative;
-    width: 20%;
+    /* width: 20%; */
 }
 
 .logo {
@@ -53,35 +57,69 @@ Header
 /* Search Box */
 
 .header__search-box {
-    width: 15%;
+    position: relative;
+    /* width: 15%; */
 }
 
 .search-box {
-    font-size: .8em;
+    font-size: .8rem;
     padding: 8px;
-    margin: 10px;
+    margin: 0 auto;
     border-radius: 100px;
     border: 1px solid hsl(0, 0%, 70%);
 }
 
 .fa-search {
-    position: relative;
-    left: -40px;
-    color: var(--text-color);
+    position: absolute;
+    right: 80px;
+    color: var(--text-main);
 }
 /* Navigation */
+
+.header__nav {
+    justify-content: flex-start;
+}
+
 .nav__list {
     display: flex;
     list-style: none;
-    gap: 20px;
+    margin-left: 20px;
 }
 
 .nav__list-item {
-    font-size: 1.25em;
+    font-size: 1.25rem;
     font-weight: 100;
     color: var(--text-color);
+    margin-left: 30px;
 }
 
 .nav__list-item:nth-of-type(5) {
-    color: hsl(32, 120%, 50%);
+    color: hsl(20, 120%, 60%);
+}
+
+/* Header Icons */
+
+.header__icons {
+    font-size: 1.25rem;
+    justify-content: space-around;
+}
+
+.fa-envelope {
+    color: hsl(120, 50%, 60%);
+}
+
+.fa-bell {
+    color: hsl(50, 77%, 60%);
+}
+
+.fa-user {
+    color: hsl(300, 76%, 43%);
+}
+
+/* Header Avatar */
+
+.user-avatar {
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px;
 }
