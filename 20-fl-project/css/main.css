@@ -69,9 +69,9 @@ Header
     border: 1px solid hsl(0, 0%, 70%);
 }
 
-.fa-search {
+.search-icon {
     position: absolute;
-    right: 80px;
+    right: 70px;
     color: var(--text-main);
 }
 /* Navigation */
@@ -86,15 +86,20 @@ Header
     margin-left: 20px;
 }
 
-.nav__list-item {
+.nav__list-item a {
     font-size: 1.25rem;
     font-weight: 100;
-    color: var(--text-color);
+    text-decoration: none;
+    color: var(--text-main);
     margin-left: 30px;
 }
 
-.nav__list-item:nth-of-type(5) {
-    color: hsl(20, 120%, 60%);
+.nav__list-item a:hover {
+    color: var(--text-bold);
+}
+
+.premium a {
+    color: hsl(22, 121%, 64%);
 }
 
 /* Header Icons */
@@ -104,15 +109,15 @@ Header
     justify-content: space-around;
 }
 
-.fa-envelope {
+.chat-icon {
     color: hsl(120, 50%, 60%);
 }
 
-.fa-bell {
+.notification-icon {
     color: hsl(50, 77%, 60%);
 }
 
-.fa-user {
+.person-icon {
     color: hsl(300, 76%, 43%);
 }
 
@@ -122,4 +127,32 @@ Header
     width: 50px;
     border-radius: 50%;
     margin-left: 20px;
+}
+
+/* Header Feed Navigation */
+
+.feed__nav {
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.feed__nav-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.feed__nav-list-item a {
+    font-weight: 200;
+    margin-left: 35px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--text-main);
+}
+
+.feed__nav-list-item a:hover {
+    color: var(--text-bold);
+    border-bottom: 2px solid hsl(211, 52%, 56%);
 }

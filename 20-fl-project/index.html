@@ -8,11 +8,10 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:200,300,400,500,700" rel="stylesheet">
+  <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <!-- CSS -->
   <link rel="stylesheet" href="./css/main.css" />
-
-  <!-- Font Awesome -->
-  <script src="https://use.fontawesome.com/d78e1d7007.js"></script>
 
 </head>
 <body>
@@ -25,29 +24,41 @@
       </div>
       <div class="header__search-box">
         <input type="text" class="search-box" placeholder="Search">
-        <i class="fa fa-search"></i>
+        <!-- <i class="fa fa-search"></i> -->
+        <i class="material-icons search-icon">search</i>
       </div>
       <div class="header__nav">
         <nav class="nav">
           <ul class="nav__list">
-            <li class="nav__list-item">Home</li>
-            <li class="nav__list-item">Profile</li>
-            <li class="nav__list-item">Conections</li>
-            <li class="nav__list-item">Interest</li>
-            <li class="nav__list-item">Try Premium</li>
+            <li class="nav__list-item"><a href="#">Home</a></li>
+            <li class="nav__list-item"><a href="#">Profile</a></li>
+            <li class="nav__list-item"><a href="#">Conections</a></li>
+            <li class="nav__list-item"><a href="#">Interest</a></li>
+            <li class="nav__list-item premium"><a href="#">Try Premium</a></li>
           </ul>
         </nav>
       </div>
       <div class="header__icons">
-        <i class="fa fa-envelope"></i>
-        <i class="fa fa-bell"></i>
-        <i class="fa fa-user"></i>
+        <a href="#"><i class="material-icons chat-icon">chat</i></a>
+        <a href="#"><i class="material-icons notification-icon">notifications</i></a>
+        <a href="#"><i class="material-icons person-icon">person_add</i></a>
       </div>
       <div class="header__user-avatar">
         <img src="/img/avatar.jpg" class="user-avatar" alt="User avatar">
       </div>
     </header>
     <!-- Header Ends -->
+
+    <!-- Feed Navigation -->
+    <div class="feed__nav">
+      <ul class="feed__nav-list">
+        <li class="feed__nav-list-item"><a href="#">Posts</a></li>
+        <li class="feed__nav-list-item"><a href="#">Background</a></li>
+        <li class="feed__nav-list-item"><a href="#">Recommendations</a></li>
+        <li class="feed__nav-list-item"><a href="#">Following</a></li>
+      </ul>
+    </div>
+    <!-- Feed Navigation Ends -->
   </main>
   <!-- Main Container Ends -->
 </body>
